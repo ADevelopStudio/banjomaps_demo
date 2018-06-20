@@ -20,7 +20,6 @@ extension Shape {
     }
     
     @objc private func doubleTapped()  {
-        self.image = nil
-        self.loadColor()
+        self.decore()
     }
 }

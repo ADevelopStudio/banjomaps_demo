@@ -14,28 +14,13 @@ enum JSONError: String, Error {
     case ConversionFailed = "ERROR: conversion from JSON failed"
 }
 
-struct ColorPatern: Codable {
-    var red: CGFloat
-    var green: CGFloat
-    var blue: CGFloat
-}
-struct ImageLink: Codable {
-    var imageUrl: String
-}
-struct LoadedColor: Codable {
-    var rgb: ColorPatern
-    func toColor() -> UIColor {
-        return UIColor(red: rgb.red/255, green: rgb.green/255, blue: rgb.blue/255, alpha: 1)
-    }
-}
-
 struct ConnectionManager {
     static let getColorUrl = "http://www.colourlovers.com/api/colors/random?format=json"
     static let getImageUrl = "http://www.colourlovers.com/api/patterns/random?format=json"
-
+    
     static func downloadSampleImage(completion: @escaping (UIImage?)->()) {
-        self.getImageUrl { (linkString) in
-            guard let linkString = linkString, let url = URL(string: linkString) else {
+        self.getImageUrl { (url) in
+            guard let url = url else {
                 completion(nil)
                 return
             }
@@ -54,8 +39,8 @@ struct ConnectionManager {
     }
     
     
-    private static func getImageUrl(completion: @escaping (_ linkString: String?)->()) {
-        guard let url = URL(string: self.getColorUrl) else {
+    private static func getImageUrl(completion: @escaping (_ url: URL?)->()) {
+        guard let url = URL(string: self.getImageUrl) else {
             completion(nil)
             return
         }
@@ -64,7 +49,7 @@ struct ConnectionManager {
                 guard let data = data else {throw JSONError.NoData}
                 let decoder = JSONDecoder()
                 guard let links  = try? decoder.decode([ImageLink].self, from: data) else {throw JSONError.ConversionFailed}
-                DispatchQueue.main.async {completion(links.first?.imageUrl)}
+                DispatchQueue.main.async {completion(links.first?.url)}
             } catch let error as JSONError {
                 print(error)
                 DispatchQueue.main.async {completion(nil)}

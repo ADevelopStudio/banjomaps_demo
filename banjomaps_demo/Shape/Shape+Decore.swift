@@ -24,7 +24,10 @@ extension Shape {
     func loadImage()  {
         ConnectionManager.downloadSampleImage { img in
             self.image = img
-            if img == nil {self.animateToColor()}
+            if img == nil {
+                print("WTF?")
+                self.animateToColor()
+            }
         }
     }
     
