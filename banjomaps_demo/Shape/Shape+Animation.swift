@@ -22,6 +22,7 @@ extension Shape {
                         self.transform = CGAffineTransform(scaleX: 0.2, y: 0.2)
         }, completion: { _ in
             super.removeFromSuperview()
+            UISelectionFeedbackGenerator().selectionChanged()
         })
     }
     

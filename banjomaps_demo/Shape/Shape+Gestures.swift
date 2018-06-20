@@ -32,6 +32,7 @@ extension Shape {
     }
     
     @objc private func doubleTapped()  {
+        UIImpactFeedbackGenerator().impactOccurred()
         self.decore()
     }
     
