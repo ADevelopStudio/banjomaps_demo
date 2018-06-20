@@ -9,6 +9,11 @@
 import Foundation
 import UIKit
 
+enum TypeOfShape {
+    static let allValues = [TypeOfShape.square , .circle]
+    case square, circle
+}
+
 struct Constants {
     static let colors = [UIColor.red, .blue, .green, .yellow, .magenta, .gray]
 }

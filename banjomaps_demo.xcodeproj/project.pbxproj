@@ -15,6 +15,9 @@
 		6296F2A620DA695F0076AE9E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6296F2A520DA695F0076AE9E /* Constants.swift */; };
 		6296F2A820DA69D70076AE9E /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6296F2A720DA69D70076AE9E /* Extentions.swift */; };
 		6296F2AA20DA6B4C0076AE9E /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6296F2A920DA6B4C0076AE9E /* Shape.swift */; };
+		6296F2AC20DA70B40076AE9E /* Shape+Decore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6296F2AB20DA70B40076AE9E /* Shape+Decore.swift */; };
+		6296F2AE20DA71C20076AE9E /* Shape+Gestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6296F2AD20DA71C20076AE9E /* Shape+Gestures.swift */; };
+		6296F2B020DA74360076AE9E /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6296F2AF20DA74360076AE9E /* ConnectionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		6296F2A520DA695F0076AE9E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6296F2A720DA69D70076AE9E /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		6296F2A920DA6B4C0076AE9E /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		6296F2AB20DA70B40076AE9E /* Shape+Decore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shape+Decore.swift"; sourceTree = "<group>"; };
+		6296F2AD20DA71C20076AE9E /* Shape+Gestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shape+Gestures.swift"; sourceTree = "<group>"; };
+		6296F2AF20DA74360076AE9E /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +69,10 @@
 				6296F29320DA66A50076AE9E /* AppDelegate.swift */,
 				6296F29520DA66A50076AE9E /* ViewController.swift */,
 				6296F2A920DA6B4C0076AE9E /* Shape.swift */,
+				6296F2AB20DA70B40076AE9E /* Shape+Decore.swift */,
+				6296F2AD20DA71C20076AE9E /* Shape+Gestures.swift */,
 				6296F2A520DA695F0076AE9E /* Constants.swift */,
+				6296F2AF20DA74360076AE9E /* ConnectionManager.swift */,
 				6296F2A720DA69D70076AE9E /* Extentions.swift */,
 				6296F29720DA66A50076AE9E /* Main.storyboard */,
 				6296F29A20DA66A60076AE9E /* Assets.xcassets */,
@@ -147,6 +156,9 @@
 				6296F2AA20DA6B4C0076AE9E /* Shape.swift in Sources */,
 				6296F2A820DA69D70076AE9E /* Extentions.swift in Sources */,
 				6296F29620DA66A50076AE9E /* ViewController.swift in Sources */,
+				6296F2AE20DA71C20076AE9E /* Shape+Gestures.swift in Sources */,
+				6296F2AC20DA70B40076AE9E /* Shape+Decore.swift in Sources */,
+				6296F2B020DA74360076AE9E /* ConnectionManager.swift in Sources */,
 				6296F29420DA66A50076AE9E /* AppDelegate.swift in Sources */,
 				6296F2A620DA695F0076AE9E /* Constants.swift in Sources */,
 			);

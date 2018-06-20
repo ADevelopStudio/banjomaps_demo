@@ -8,12 +8,17 @@
 
 import UIKit
 
-class Shape: UIView {
+class Shape: UIImageView {
+    var type = TypeOfShape.allValues.randomItem() ?? .square
+    
     init(){
-        let ranromSize = Int(arc4random_uniform(UInt32(50))+20)
+        let ranromSize = Int(arc4random_uniform(UInt32(100))+30)
         super.init(frame:  CGRect(x: 0, y: 0, width: ranromSize, height: ranromSize))
-        self.backgroundColor = Constants.colors.randomItem()
+        self.backgroundColor = UIColor.groupTableViewBackground
+        self.decore()
+        self.loadColor()
     }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
