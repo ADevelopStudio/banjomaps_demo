@@ -12,7 +12,7 @@ class Shape: UIImageView {
     var type = TypeOfShape.allValues.randomItem() ?? .square
     
     init(){
-        let ranromSize = Int(arc4random_uniform(UInt32(100))+30)
+        let ranromSize = Int(arc4random_uniform(UInt32(100))+80)
         super.init(frame:  CGRect(x: 0, y: 0, width: ranromSize, height: ranromSize))
         self.backgroundColor = UIColor.groupTableViewBackground
         self.decore()
