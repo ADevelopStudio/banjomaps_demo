@@ -15,15 +15,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func createShape(_ sender: UITapGestureRecognizer) {
-        let view1 = self.generateView()
-        view1.center = sender.location(in: self.view)
-        self.view.addSubview(view1)
+        let shape = Shape()
+        shape.center = sender.location(in: self.view)
+        self.view.addSubview(shape)
     }
-    
-    func generateView() -> UIView {
-        let redView = UIView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
-        redView.backgroundColor = .red
-        return redView
-    }
+
 }
 
