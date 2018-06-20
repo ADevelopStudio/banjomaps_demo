@@ -15,5 +15,5 @@ enum TypeOfShape {
 }
 
 struct Constants {
-    static let colors = [UIColor.red, .blue, .green, .yellow, .magenta, .gray]
+    static let colors = [UIColor.red, .blue, .green, .cyan, .orange, .yellow, .purple, .magenta, .brown, .gray]
 }
