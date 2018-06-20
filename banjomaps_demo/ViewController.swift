@@ -9,17 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func createShape(_ sender: UITapGestureRecognizer) {
+        let view1 = self.generateView()
+        view1.center = sender.location(in: self.view)
+        self.view.addSubview(view1)
     }
-
-
+    
+    func generateView() -> UIView {
+        let redView = UIView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        redView.backgroundColor = .red
+        return redView
+    }
 }
 
