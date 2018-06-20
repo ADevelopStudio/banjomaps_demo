@@ -16,7 +16,7 @@ class Shape: UIImageView {
         super.init(frame:  CGRect(x: 0, y: 0, width: ranromSize, height: ranromSize))
         self.backgroundColor = UIColor.groupTableViewBackground
         self.decore()
-        self.loadColor()
+        self.addGestures()
     }
     
     required init?(coder aDecoder: NSCoder) {
